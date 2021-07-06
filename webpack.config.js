@@ -9,7 +9,7 @@ const distDir = path.join(rootDir, 'dist')
 const staticDir = path.join(srcDir, 'static')
 const indexJs = path.join(srcDir, 'index.js')
 const indexHtml = path.join(srcDir, 'index.html')
-const publicPath = '/'
+const publicPath = '/sbs/'
 const assetPath = '/assets'
 const serviceWorkerPath = '/sw.js'
 
