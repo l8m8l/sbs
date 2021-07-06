@@ -35,26 +35,13 @@ const EventDisplay = {
 
 export default function Stats({ id }) {
   const [stats, setStats] = useState()
-  const [focus, setFocus] = useState(true)
 
   useEffect(() => {
-    const focus = () => setFocus(true)
-    const blur = () => setFocus(false)
-    window.addEventListener('focus', focus)
-    window.addEventListener('blur', blur)
-    return () => {
-      window.removeEventListener('focus', focus)
-      window.removeEventListener('blur', blur)
-    }
-  }, [])
-
-  useEffect(() => {
-    if (!focus) return
     const refresh = () => fetchStats(id).then(data => setStats(data))
     refresh()
     const timer = setInterval(refresh, 60000)
     return () => clearInterval(timer)
-  }, [focus, id])
+  }, [id])
 
   if (!stats) return null
 
