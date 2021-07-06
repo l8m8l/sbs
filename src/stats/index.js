@@ -50,16 +50,18 @@ export default function Stats({ id }) {
     <div className={css.container}>
       <div className={css.sectionTitle}>数据</div>
       <div className={css.stats}>
-        {stats.stats.map(record => (
-          <div key={record.type} className={css.statsItem}>
-            <div className={css.statsItemTitle}>
-              {StatsDisplay[record.type]}
+        {stats.stats
+          .sort((r1, r2) => r1.type - r2.type)
+          .map(record => (
+            <div key={record.type} className={css.statsItem}>
+              <div className={css.statsItemTitle}>
+                {StatsDisplay[record.type]}
+              </div>
+              <div className={css.statsItemValue}>
+                {`${record.home}:${record.away}`}
+              </div>
             </div>
-            <div className={css.statsItemValue}>
-              {`${record.home}:${record.away}`}
-            </div>
-          </div>
-        ))}
+          ))}
       </div>
       <div className={css.sectionTitle}>文字直播</div>
       <div className={css.events}>
