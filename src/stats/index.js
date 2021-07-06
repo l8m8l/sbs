@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Spinner from '../shared/Spinner'
 import css from './index.module.css'
 
 async function fetchStats(id) {
@@ -43,7 +44,7 @@ export default function Stats({ id }) {
     return () => clearInterval(timer)
   }, [id])
 
-  if (!stats) return null
+  if (!stats) return <Spinner />
 
   return (
     <div className={css.container}>

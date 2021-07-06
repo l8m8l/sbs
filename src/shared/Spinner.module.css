@@ -1,0 +1,56 @@
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 140px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 1;
+  transform: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.spinnerShadow {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background-color: grey;
+  border-radius: 100%;
+  transform: scaleX(0.8);
+  opacity: 0.6;
+  animation: spinnerShadowScale 1s cubic-bezier(0.68, 0.35, 0.29, 0.54) infinite;
+}
+
+.spinnerGravity {
+  width: 40px;
+  height: 40px;
+  animation: spinnerGravity 1s cubic-bezier(0.68, 0.35, 0.29, 0.54) infinite;
+}
+
+.spinnerBall {
+  width: 40px;
+  height: 40px;
+  background-image: url('./football.svg');
+  background-size: cover;
+  animation: spinnerBallRoll 0.5s linear infinite;
+}
+
+@keyframes spinnerShadowScale {
+  50% {
+    transform: scaleX(1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes spinnerGravity {
+  50% {
+    transform: translateY(100px);
+  }
+}
+
+@keyframes spinnerBallRoll {
+  100% {
+    transform: rotate(360deg);
+  }
+}

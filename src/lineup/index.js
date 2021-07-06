@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Spinner from '../shared/Spinner'
 import css from './index.module.css'
 import bgLine from './line.svg'
 import bgNoise from './noise.png'
@@ -42,7 +43,7 @@ export default function Lineup({ id, home = '主队', away = '客队' }) {
     fetchLineup(id).then(data => setLineup(data))
   }, [id])
 
-  if (!lineup) return null
+  if (!lineup) return <Spinner />
 
   const homeStarters = lineup.home.players.filter(player => player.starter)
   const awayStarters = lineup.away.players.filter(player => player.starter)
