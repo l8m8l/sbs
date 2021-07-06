@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.sectionTitle {
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.statsItem {
+  flex: 0 0 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.statsItemTitle {
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.statsItemValue {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.events {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 16px;
+}
+
+.event {
+  margin: 4px;
+  padding: 16px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+
+.eventTitle {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.eventMessage {
+  font-size: 12px;
+}

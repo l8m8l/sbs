@@ -89,8 +89,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border: 2px solid #fff;
   border-radius: 50%;
   overflow: hidden;
@@ -172,7 +172,7 @@
   color: rgba(0, 0, 0, 0.45);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 480px) {
   .playerTeams {
     flex-direction: row;
   }

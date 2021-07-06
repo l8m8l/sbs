@@ -39,9 +39,7 @@ export default function Lineup({ id, home = '主队', away = '客队' }) {
   const [lineup, setLineup] = useState()
 
   useEffect(() => {
-    fetchLineup(id).then(data => {
-      setLineup(data)
-    })
+    fetchLineup(id).then(data => setLineup(data))
   }, [id])
 
   if (!lineup) return null
