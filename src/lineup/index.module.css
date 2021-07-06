@@ -1,0 +1,187 @@
+.container {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  background-color: #5c8301;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.teamName {
+  flex: 1;
+  font-weight: bold;
+}
+
+.lineup {
+  position: relative;
+}
+
+.ftField {
+  position: relative;
+  width: 100%;
+  padding-bottom: 161.36%;
+  background-color: #5c8301;
+  z-index: 0;
+}
+
+.ftFieldStripes {
+  position: absolute;
+  top: 6.7%;
+  left: 3%;
+  bottom: 1.7%;
+  right: 3%;
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 0
+  );
+  background-size: 1% 14.575%;
+}
+
+.ftFieldOverlay,
+.ftFieldNoise,
+.ftFieldLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.ftFieldOverlay {
+  background: radial-gradient(
+    ellipse closest-corner at 50% 50%,
+    transparent 0,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+}
+
+.ftFieldLine {
+  left: 3%;
+  right: 3%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.ftFieldNoise {
+  background-size: 40px;
+}
+
+.player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.playerNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.playerName {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  font-size: 12px;
+  text-align: center;
+  min-width: 80px;
+  transform: translateX(-50%) scale(0.8);
+  transform-origin: top;
+}
+
+.playerList {
+  margin: 8px 0;
+  padding: 0 8px;
+}
+
+.playerListTitle {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.playerTeams {
+  display: flex;
+  flex-direction: column;
+}
+
+.playerTeam {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.playerTeamName {
+  margin: 4px 0;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.playerItem {
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+  font-size: 12px;
+}
+
+.playerItemNumber {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.playerItemName {
+  margin: 0 8px;
+}
+
+.playerEvents {
+  display: flex;
+}
+
+.playerEvent {
+  display: flex;
+  margin: 0 4px;
+  font-size: 12px;
+}
+
+.playerEventName {
+  padding-right: 2px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.playerEventTime {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+@media (min-width: 800px) {
+  .playerTeams {
+    flex-direction: row;
+  }
+
+  .playerTeam:last-child {
+    align-items: flex-end;
+  }
+
+  .playerTeam:last-child .playerItem {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+}
