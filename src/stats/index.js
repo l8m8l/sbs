@@ -35,7 +35,7 @@ const EventDisplay = {
 
 export default function Stats({ id }) {
   const [stats, setStats] = useState()
-  const [focus, setFocus] = useState(false)
+  const [focus, setFocus] = useState(true)
 
   useEffect(() => {
     const focus = () => setFocus(true)
